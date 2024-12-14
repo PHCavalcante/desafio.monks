@@ -35,22 +35,24 @@ h2 {
   font-size: 2rem;
 }
 #header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   width: 100%;
   background-color: var(--primary-bg-dark);
   color: var(--primary-text-light);
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
+  justify-content: space-between;
+  overflow: hidden;
 }
 #header #monksLogo {
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+  height: auto;
+  object-fit: cover;
+  max-width: 50%;
 }
 #categories {
   display: flex;
+  width: 100%;
+  min-width: 100%;
   flex-direction: row;
   align-items: center;
   padding: 24px 20px;
@@ -59,10 +61,8 @@ h2 {
   margin-right: 24px;
   max-width: 150px;
 }
-#headerContent {
-  max-width: 1200px;
-}
 #menu {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 35px;
@@ -96,7 +96,7 @@ h2 {
   line-height: 1.5;
 }
 #scroll {
-  margin: 4rem auto;
+  margin: 3rem auto;
   max-width: 100px;
 }
 #main {
@@ -397,7 +397,7 @@ hr {
     margin: 1rem 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   #menu {
     position: sticky;
     display: none;
@@ -457,6 +457,8 @@ hr {
   #menuToggle {
     display: block;
   }
+}
+@media (max-width: 768px){
   #section1 > div:last-child,
   #section2 > div:last-child {
     flex-direction: column;
